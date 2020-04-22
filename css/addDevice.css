@@ -1,0 +1,145 @@
+/*
+    ce fichier est pour le style de la page pour inscrire un module.
+*/
+
+.addDeviceContent{
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 100px;
+    min-width: min-content;
+    text-align: center;
+}
+
+.addDeviceContent h1{
+    font-size: 28px;
+    color: #000084;
+}
+
+/* part about the input text field */
+
+.addForm{
+    width: 340px;
+    margin: auto;
+}
+
+.addFormInp{
+    font-size: 18px;
+    padding: 10px;
+    width: 320px;
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+.addFormInp label{
+    position: absolute;
+    left:15px;
+    top: 15px;
+    color: #333;
+    transition: 300ms ease all;
+}
+
+.addFormInp textarea,.addFormInp input{
+    padding:10px 10px 10px 5px;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: #333;
+    width: 300px;
+
+}
+
+/* on focus move up the labels */
+.addFormInp textarea:focus + label, .addFormInp input:focus + label{
+    top: -5px;
+    left: 10px;
+    color: #2196F3;
+    font-size: 12px;
+
+}
+
+.addFormInp textarea:valid + label, .addFormInp input:valid + label{
+    top: -5px;
+    left: 10px;
+    color: #2196F3;
+    font-size: 12px;
+
+}
+
+.addFormInp textarea:focus, .addFormInp input:focus{
+    border-bottom: 1px solid #2196F3;
+}
+
+.addFormInp textarea{
+    resize: none;
+}
+
+/* part about the multi choice list */
+
+.addFormChoices{
+    margin:auto;
+    padding: 0px;
+    width: 300px;
+}
+
+.addFormBox{
+    border: 1px solid lightgray;
+    padding: 10px;
+    color: #333;
+    background-color: whitesmoke;
+    font-size: 20px;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.addFormBox:hover{
+    color: #2196F3;
+}
+
+.addFormBox input{
+    cursor: pointer;
+}
+
+
+/* send button design */
+
+#sendBtn{
+    padding: 10px;
+    color: #333;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* text message from saving the module */
+
+#addDeviceResponse{
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    border-radius: 5px;
+}
+
+.ErrorAnswer{
+    background-color: lightcoral;
+}
+
+.ErrorAnswer strong{
+    color: black;
+}
+
+.OkAnswer{
+    background-color: #a6f1a6;
+}
+
+/* design for errorId*/
+#errorId{
+    display: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}

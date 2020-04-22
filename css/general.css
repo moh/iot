@@ -1,0 +1,140 @@
+/*
+    le style css pour le forme general de touts les pages de site.
+*/
+
+body, html{
+    margin : 0px;
+    height: 100%;
+    font-family: 'Roboto Slab', serif;
+}
+
+/*
+    header style part
+*/
+.header{
+    height: 80px;
+
+    padding: 10px;
+    text-align: center;
+    Color: white;
+
+    background-color: rgb(15,82,186);
+}
+
+.header h1{
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.header p{
+    margin-top: 5px;
+}
+
+
+/*
+    contents style part, avec le style de optionsBar
+*/
+
+.contents{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    min-height: 700px;
+}
+
+.optionsBar{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    min-width: max-content;
+    padding-top: 15px;
+    background-color: white;
+    border-right: 1px #828282 solid;
+}
+
+.optionsBar a{
+    font: bold 20px Arial;
+    text-decoration: none;
+    color: #222021;
+    padding: 15px;
+    border-bottom: 1px #828282 dotted;
+}
+
+.optionsBar a:hover{
+    color: rgb(15,82,186);
+}
+
+/* style pour warningNotification */
+#warningNotification{
+    display: none;
+    border-bottom: none;
+    margin-top: 10px;
+    background-color: lightcoral;
+}
+
+/*
+    contentSide to be scrollable if content is overflowed
+*/
+.contentSide{
+    overflow: scroll;
+    width: 100%;
+}
+
+/*
+    Footer style
+*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #48494b;
+    background-color: #d9dddc;
+}
+
+
+.footerDescription, .footerPlan, .footerContact{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.footerPlan a, .footerContact a{
+    text-decoration: none;
+    color: #48494b;
+    padding: 10px;
+}
+
+.footerPlan a:hover, .footerContact a:hover{
+    text-decoration: underline;
+}
+
+
+/* si le window est tres petit alors le bar va devenir horizontal 
+    changer le bar quand le width de window est plus petit que 600px
+*/
+
+
+@media only screen and (max-width: 800px) {
+    .contents{
+        flex-direction: column;
+    }
+    .optionsBar{
+        flex-direction: row;
+        width:100%;
+        min-width: unset;
+        padding-top: 0px;
+        border-right: unset;
+        border-bottom: 1px solid gray;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .optionsBar a{
+        border-bottom: unset;
+    }
+
+    #warningNotification{
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+}

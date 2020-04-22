@@ -1,0 +1,232 @@
+/*
+    style pour le partie de showDevices
+*/
+
+/* style general pour les deux parties, liste des modules et info*/
+.showDevicesContent{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+
+/* style pour le partie si on rencontre un erreur dans la recuperation des donnes */
+
+#errorGetData{
+    display: none;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: lightcoral;
+}
+
+/* style pour le partie de waiting get data */
+#waitingGetData{
+    visibility: visible;
+}
+
+
+/*style pour liste*/
+
+
+
+#showDevicesList{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    width: 25%;
+    height: 70%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.moduleBox{
+    border: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.warningBox{
+    background-color: #fda3a3;
+}
+
+.moduleBox:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.moduleId{
+    padding: 5px;
+    width: 80px;
+    overflow: auto;
+    border-right: 1px dotted gray;
+}
+
+.rightPart{
+    width: 100%;
+    margin-left: 30px;
+}
+
+.moduleNom{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.moduleType{
+    color: #686868;
+    font-size: small;
+}
+
+
+/* la partie droit, ou il y a les informations */
+
+#showDevicesInfo{
+    width: 60%;
+    border-left: 1px dotted gray;
+    overflow: scroll;
+}
+
+#showDeviceContent{
+    visibility: hidden;
+    height: 100%;
+    padding: 30px;
+}
+
+.basicModuleinfos p, .basicModuleinfos p{
+    margin: 0px;
+    font-weight: bold;
+    color: #333;
+}
+
+.basicModuleinfos{
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    background-color: #f4f4f4;
+    margin-bottom: 50px;
+
+}
+
+.showSimpleData{
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.showSimpleData:last-child{
+    border-bottom: unset;
+}
+
+.showSimpleData div{
+    margin-left: 10px;
+    color: #555
+}
+
+#m_descr{
+    width: 60%;
+    height: 50px;
+    overflow: auto;
+    word-wrap: break-word;
+    resize: both;
+}
+
+/* design de la partie de message de log  */
+
+#moduleLogInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.msgLogBox{
+    width: 45%;
+    height: 300px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    overflow: scroll;
+}
+
+.msgBox{
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#okLog .msgBox{
+    background-color: #a6f1a6;
+}
+
+/* design pour les bouttons */
+
+#moduleActionButtons{
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#deleteModule{
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+}
+
+#exportModuleButton{
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid lightgray;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#exportModuleButton:hover{
+    background-color: lightgray;
+}
+
+/* design pour le text de warning pour supprimer */
+#warningDelete{
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+/*
+    si le width de screen est plus petit que 1100px,
+    alors on places les infos en colonnes.
+    au dessus les listes des blocs, et au dessous
+    les informations d'un bloc.
+*/
+@media only screen and (max-width: 1100px) {
+    .showDevicesContent{
+        flex-direction: column;
+    }
+
+    #showDevicesList{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #showDevicesInfo{
+        width: 100%;
+        border-left: unset;
+        height: 100%;
+        border-top: 1px dotted gray;
+    }
+    
+    #moduleLogInfo{
+        flex-direction: column;
+    }
+
+    .msgLogBox{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+}

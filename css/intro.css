@@ -1,0 +1,27 @@
+/*
+    ce fichier est pour le style de la page d'accueil,
+     ou il y a la definition de IOT.
+*/
+.introText{
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 100px;
+}
+
+.introParagraph h1{
+    font-size: 28px;
+    color: #000084;
+}
+
+.introParagText{
+    padding-left: 50px;
+    border-left: 5px solid lightgray;
+    color: #333;
+}
+
+.introParagText a{
+    text-decoration: none;
+    font-style: italic;
+}
